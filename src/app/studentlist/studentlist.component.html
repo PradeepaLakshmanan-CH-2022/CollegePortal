@@ -1,0 +1,18 @@
+<div> 
+  <div> 
+      <h1 style="text-align: center;">Welcome to college search portal!!</h1> 
+ <label>Name</label> 
+<input type="text" id="name" placeholder="Enter Name" name="name" #name> 
+</div> 
+
+<div> 
+ <label>City</label> 
+  <input type="text" id="city" placeholder="Enter City" name="city" #city><br><br> 
+</div> 
+  <app-collegelist (ReturnColleges)="Colleges=$event" [parentData]="city"></app-collegelist> 
+  <ul *ngFor="let colleges of Colleges"> 
+
+      <li>{{colleges}}</li> 
+  </ul> 
+
+</div> 
